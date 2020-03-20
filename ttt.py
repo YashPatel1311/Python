@@ -1,7 +1,7 @@
 import sys
+from IPython.display import clear_output
 
 ds=[]
-
 turns=[]
 
 def start_game():
@@ -15,8 +15,8 @@ def start_game():
         for j in range(3):
             ds[i].append(' ')
         
-
 def display():
+    clear_output()
     for i in range(3):
         for j in range(3):
             if j<2:
@@ -118,11 +118,9 @@ def check():
     if result=="XXX" or result=="OOO":
         return True
     
-
 if __name__=='__main__':
 
         replay= 'yes'
         while replay=='yes':
             play()
             replay=input("Type yes to replay: ")
-                            
